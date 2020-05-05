@@ -1,0 +1,157 @@
+20-5-3 01:40:24.4|Info|Bootstrap|Starting Lidarr - /app/lidarr/bin/Lidarr.exe - Version 0.7.1.1381
+20-5-3 01:40:26.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+20-5-3 01:40:26.3|Info|Router|Application mode: Interactive
+20-5-3 01:40:26.7|Info|MigrationLogger|*** Migrating data source=/config/lidarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+20-5-3 01:40:26.9|Info|MigrationLogger|*** VersionMigration migrating ***
+20-5-3 01:40:27.0|Info|MigrationLogger|*** VersionUniqueMigration migrating ***
+20-5-3 01:40:27.0|Info|MigrationLogger|*** VersionDescriptionMigration migrating ***
+20-5-3 01:40:27.0|Info|MigrationLogger|*** 1: InitialSetup migrating ***
+20-5-3 01:40:27.0|Info|InitialSetup|Starting migration to 1
+20-5-3 01:40:27.1|Info|MigrationLogger|*** 2: add_reason_to_pending_releases migrating ***
+20-5-3 01:40:27.1|Info|add_reason_to_pending_releases|Starting migration to 2
+20-5-3 01:40:27.1|Info|MigrationLogger|*** 3: add_medium_support migrating ***
+20-5-3 01:40:27.1|Info|add_medium_support|Starting migration to 3
+20-5-3 01:40:27.2|Info|MigrationLogger|*** 4: add_various_qualites_in_profile migrating ***
+20-5-3 01:40:27.2|Info|add_various_qualites_in_profile|Starting migration to 4
+20-5-3 01:40:27.2|Info|MigrationLogger|*** 5: metadata_profiles migrating ***
+20-5-3 01:40:27.2|Info|metadata_profiles|Starting migration to 5
+20-5-3 01:40:27.2|Info|MigrationLogger|*** 6: separate_automatic_and_interactive_search migrating ***
+20-5-3 01:40:27.2|Info|separate_automatic_and_interactive_search|Starting migration to 6
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 7: change_album_path_to_relative migrating ***
+20-5-3 01:40:27.3|Info|change_album_path_to_relative|Starting migration to 7
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 8: change_quality_size_mb_to_kb migrating ***
+20-5-3 01:40:27.3|Info|change_quality_size_mb_to_kb|Starting migration to 8
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 9: album_releases migrating ***
+20-5-3 01:40:27.3|Info|album_releases|Starting migration to 9
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 10: album_releases_fix migrating ***
+20-5-3 01:40:27.3|Info|album_releases_fix|Starting migration to 10
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 11: import_lists migrating ***
+20-5-3 01:40:27.3|Info|import_lists|Starting migration to 11
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 12: add_release_status migrating ***
+20-5-3 01:40:27.3|Info|add_release_status|Starting migration to 12
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 13: album_download_notification migrating ***
+20-5-3 01:40:27.3|Info|album_download_notification|Starting migration to 13
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 14: fix_language_metadata_profiles migrating ***
+20-5-3 01:40:27.3|Info|fix_language_metadata_profiles|Starting migration to 14
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 15: remove_fanzub migrating ***
+20-5-3 01:40:27.3|Info|remove_fanzub|Starting migration to 15
+20-5-3 01:40:27.3|Info|MigrationLogger|*** 16: update_artist_history_indexes migrating ***
+20-5-3 01:40:27.3|Info|update_artist_history_indexes|Starting migration to 16
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 17: remove_nma migrating ***
+20-5-3 01:40:27.4|Info|remove_nma|Starting migration to 17
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 18: album_disambiguation migrating ***
+20-5-3 01:40:27.4|Info|album_disambiguation|Starting migration to 18
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 19: add_ape_quality_in_profiles migrating ***
+20-5-3 01:40:27.4|Info|add_ape_quality_in_profiles|Starting migration to 19
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 20: remove_pushalot migrating ***
+20-5-3 01:40:27.4|Info|remove_pushalot|Starting migration to 20
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 21: add_custom_filters migrating ***
+20-5-3 01:40:27.4|Info|add_custom_filters|Starting migration to 21
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 22: import_list_tags migrating ***
+20-5-3 01:40:27.4|Info|import_list_tags|Starting migration to 22
+20-5-3 01:40:27.4|Info|MigrationLogger|*** 23: add_release_groups_etc migrating ***
+20-5-3 01:40:27.4|Info|add_release_groups_etc|Starting migration to 23
+20-5-3 01:40:27.5|Info|MigrationLogger|*** 24: NewMediaInfoFormat migrating ***
+20-5-3 01:40:27.5|Info|NewMediaInfoFormat|Starting migration to 24
+20-5-3 01:40:27.5|Info|MigrationLogger|*** 25: rename_restrictions_to_release_profiles migrating ***
+20-5-3 01:40:27.5|Info|rename_restrictions_to_release_profiles|Starting migration to 25
+20-5-3 01:40:27.5|Info|MigrationLogger|*** 26: rename_quality_profiles_add_upgrade_allowed migrating ***
+20-5-3 01:40:27.5|Info|rename_quality_profiles_add_upgrade_allowed|Starting migration to 26
+20-5-3 01:40:27.5|Info|MigrationLogger|*** 27: add_import_exclusions migrating ***
+20-5-3 01:40:27.6|Info|add_import_exclusions|Starting migration to 27
+20-5-3 01:40:27.6|Info|MigrationLogger|*** 28: clean_artist_metadata_table migrating ***
+20-5-3 01:40:27.6|Info|clean_artist_metadata_table|Starting migration to 28
+20-5-3 01:40:27.6|Info|MigrationLogger|*** 29: health_issue_notification migrating ***
+20-5-3 01:40:27.6|Info|health_issue_notification|Starting migration to 29
+20-5-3 01:40:27.6|Info|MigrationLogger|*** 30: add_mediafilerepository_mtime migrating ***
+20-5-3 01:40:27.6|Info|add_mediafilerepository_mtime|Starting migration to 30
+20-5-3 01:40:27.7|Info|MigrationLogger|*** 31: add_artistmetadataid_constraint migrating ***
+20-5-3 01:40:27.7|Info|add_artistmetadataid_constraint|Starting migration to 31
+20-5-3 01:40:27.7|Info|MigrationLogger|*** 32: old_ids_and_artist_alias migrating ***
+20-5-3 01:40:27.7|Info|old_ids_and_artist_alias|Starting migration to 32
+20-5-3 01:40:27.7|Info|MigrationLogger|*** 33: download_propers_config migrating ***
+20-5-3 01:40:27.7|Info|download_propers_config|Starting migration to 33
+20-5-3 01:40:27.7|Info|MigrationLogger|*** 34: remove_language_profiles migrating ***
+20-5-3 01:40:27.7|Info|remove_language_profiles|Starting migration to 34
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 35: multi_disc_naming_format migrating ***
+20-5-3 01:40:27.8|Info|multi_disc_naming_format|Starting migration to 35
+20-5-3 01:40:27.8|Info|MigrationLogger|*** Migrating data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+20-5-3 01:40:27.8|Info|MigrationLogger|*** VersionMigration migrating ***
+20-5-3 01:40:27.8|Info|MigrationLogger|*** VersionUniqueMigration migrating ***
+20-5-3 01:40:27.8|Info|MigrationLogger|*** VersionDescriptionMigration migrating ***
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 1: InitialSetup migrating ***
+20-5-3 01:40:27.8|Info|InitialSetup|Starting migration to 1
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 2: add_reason_to_pending_releases migrating ***
+20-5-3 01:40:27.8|Info|add_reason_to_pending_releases|Starting migration to 2
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 3: add_medium_support migrating ***
+20-5-3 01:40:27.8|Info|add_medium_support|Starting migration to 3
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 4: add_various_qualites_in_profile migrating ***
+20-5-3 01:40:27.8|Info|add_various_qualites_in_profile|Starting migration to 4
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 5: metadata_profiles migrating ***
+20-5-3 01:40:27.8|Info|metadata_profiles|Starting migration to 5
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 6: separate_automatic_and_interactive_search migrating ***
+20-5-3 01:40:27.8|Info|separate_automatic_and_interactive_search|Starting migration to 6
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 7: change_album_path_to_relative migrating ***
+20-5-3 01:40:27.8|Info|change_album_path_to_relative|Starting migration to 7
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 8: change_quality_size_mb_to_kb migrating ***
+20-5-3 01:40:27.8|Info|change_quality_size_mb_to_kb|Starting migration to 8
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 9: album_releases migrating ***
+20-5-3 01:40:27.8|Info|album_releases|Starting migration to 9
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 10: album_releases_fix migrating ***
+20-5-3 01:40:27.8|Info|album_releases_fix|Starting migration to 10
+20-5-3 01:40:27.8|Info|MigrationLogger|*** 11: import_lists migrating ***
+20-5-3 01:40:27.8|Info|import_lists|Starting migration to 11
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 12: add_release_status migrating ***
+20-5-3 01:40:27.9|Info|add_release_status|Starting migration to 12
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 13: album_download_notification migrating ***
+20-5-3 01:40:27.9|Info|album_download_notification|Starting migration to 13
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 14: fix_language_metadata_profiles migrating ***
+20-5-3 01:40:27.9|Info|fix_language_metadata_profiles|Starting migration to 14
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 15: remove_fanzub migrating ***
+20-5-3 01:40:27.9|Info|remove_fanzub|Starting migration to 15
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 16: update_artist_history_indexes migrating ***
+20-5-3 01:40:27.9|Info|update_artist_history_indexes|Starting migration to 16
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 17: remove_nma migrating ***
+20-5-3 01:40:27.9|Info|remove_nma|Starting migration to 17
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 18: album_disambiguation migrating ***
+20-5-3 01:40:27.9|Info|album_disambiguation|Starting migration to 18
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 19: add_ape_quality_in_profiles migrating ***
+20-5-3 01:40:27.9|Info|add_ape_quality_in_profiles|Starting migration to 19
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 20: remove_pushalot migrating ***
+20-5-3 01:40:27.9|Info|remove_pushalot|Starting migration to 20
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 21: add_custom_filters migrating ***
+20-5-3 01:40:27.9|Info|add_custom_filters|Starting migration to 21
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 22: import_list_tags migrating ***
+20-5-3 01:40:27.9|Info|import_list_tags|Starting migration to 22
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 23: add_release_groups_etc migrating ***
+20-5-3 01:40:27.9|Info|add_release_groups_etc|Starting migration to 23
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 24: NewMediaInfoFormat migrating ***
+20-5-3 01:40:27.9|Info|NewMediaInfoFormat|Starting migration to 24
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 25: rename_restrictions_to_release_profiles migrating ***
+20-5-3 01:40:27.9|Info|rename_restrictions_to_release_profiles|Starting migration to 25
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 26: rename_quality_profiles_add_upgrade_allowed migrating ***
+20-5-3 01:40:27.9|Info|rename_quality_profiles_add_upgrade_allowed|Starting migration to 26
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 27: add_import_exclusions migrating ***
+20-5-3 01:40:27.9|Info|add_import_exclusions|Starting migration to 27
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 28: clean_artist_metadata_table migrating ***
+20-5-3 01:40:27.9|Info|clean_artist_metadata_table|Starting migration to 28
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 29: health_issue_notification migrating ***
+20-5-3 01:40:27.9|Info|health_issue_notification|Starting migration to 29
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 30: add_mediafilerepository_mtime migrating ***
+20-5-3 01:40:27.9|Info|add_mediafilerepository_mtime|Starting migration to 30
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 31: add_artistmetadataid_constraint migrating ***
+20-5-3 01:40:27.9|Info|add_artistmetadataid_constraint|Starting migration to 31
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 32: old_ids_and_artist_alias migrating ***
+20-5-3 01:40:27.9|Info|old_ids_and_artist_alias|Starting migration to 32
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 33: download_propers_config migrating ***
+20-5-3 01:40:27.9|Info|download_propers_config|Starting migration to 33
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 34: remove_language_profiles migrating ***
+20-5-3 01:40:27.9|Info|remove_language_profiles|Starting migration to 34
+20-5-3 01:40:27.9|Info|MigrationLogger|*** 35: multi_disc_naming_format migrating ***
+20-5-3 01:40:27.9|Info|multi_disc_naming_format|Starting migration to 35
+20-5-3 01:40:27.9|Info|OwinHostController|Listening on the following URLs:
+20-5-3 01:40:27.9|Info|OwinHostController|  http://*:8686/
+20-5-3 01:40:28.3|Info|LidarrBootstrapper|Starting Web Server
+20-5-3 01:40:31.9|Info|QualityProfileService|Setting up default quality profiles
+20-5-3 01:40:32.1|Info|MetadataProfileService|Setting up default metadata profile
+20-5-3 01:40:32.3|Warn|MonoDebugCheck|Mono is not running with --debug switch

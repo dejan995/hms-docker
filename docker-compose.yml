@@ -1,0 +1,193 @@
+version: "3.5"
+services:
+  # Lidarr - Music Manager
+  lidarr:
+    container_name: ${CONTAINER_NAME_LIDARR}
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    image: linuxserver/lidarr:latest
+    networks:
+      - network
+    ports:
+      - ${LIDARR_PORT}:8686
+    restart: unless-stopped
+    volumes:
+      - ${MUSIC_FOLDER}:/music
+      - ./config/lidarr:/config
+      - ${DOWNLOADS_FOLDER}:/downloads
+  # Bazarr - Subtitles Manager    
+  bazarr:
+    container_name: ${CONTAINER_NAME_BAZARR}
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    image: linuxserver/bazarr:latest
+    networks:
+      - network
+    ports:
+      - ${BAZARR_PORT}:6767
+    restart: unless-stopped
+    volumes:
+      - ${TV_FOLDER}:/tv:rw
+      - ${MOVIES_FOLDER}:/movies:rw
+      - ./config/bazarr:/config:rw
+  # Deluge - BitTorrent Client    
+  deluge:
+    container_name: ${CONTAINER_NAME_DELUGE}
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    expose:
+      - 58846/tcp
+      - 58946/tcp
+      - 58946/udp
+    ports:
+      - ${DELUGE_PORT}:8112/tcp
+    image: linuxserver/deluge:latest
+    networks:
+      - network
+    restart: unless-stopped
+    volumes:
+      - ./config/deluge:/config
+      - ${DOWNLOADS_FOLDER}:/downloads
+  # Emby - Media Server    
+  emby:
+    container_name: ${CONTAINER_NAME_EMBY}
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    image: emby/embyserver:latest
+    networks:
+      - network
+    ports:
+      - ${EMBY_PORT}:8096
+    restart: unless-stopped
+    volumes:
+      - ./config/emby:/config
+      - ${MOVIES_FOLDER}:/movies
+      - ${MUSIC_FOLDER}:/music
+      - ${TV_FOLDER}:/tv
+      - ${VIDEOS_FOLDER}:/videos
+  # Jackett - Torrent Indexer    
+  jackett:
+    container_name: ${CONTAINER_NAME_JACKETT}
+    environment:
+      - TZ=${TIME_ZONE}
+    image: linuxserver/jackett:latest
+    networks:
+      - network
+    ports:
+      - ${JACKETT_PORT}:9117
+    restart: unless-stopped
+    volumes:
+      - ${TORRENTS_FOLDER}:/downloads
+      - ./config/jackett:/config
+  # Portainer - Docker Manager    
+  portainer:
+    container_name: ${CONTAINER_NAME_PORTAINER}
+    environment: 
+      - TZ=${TIME_ZONE}
+    image: portainer/portainer:latest
+    networks:
+      - network
+    ports:
+      - ${PORTAINER_PORT}:9000
+    restart: unless-stopped
+    volumes:
+      - ./config/portainer:/data:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+  # Radarr - Movies Manager    
+  radarr:
+    container_name: ${CONTAINER_NAME_RADARR}
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    image: linuxserver/radarr:preview
+    networks:
+      - network
+    ports:
+      - ${RADARR_PORT}:7878
+    restart: unless-stopped
+    volumes:
+      - ${MOVIES_FOLDER}:/movies
+      - ${DOWNLOADS_FOLDER}:/downloads
+      - ./config/radarr:/config
+  # Sonarr - TV Shows Manager    
+  sonarr:
+    container_name: ${CONTAINER_NAME_SONARR}
+    environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    image: linuxserver/sonarr:preview
+    networks:
+      - network
+    ports:
+      - ${SONARR_PORT}:8989
+    restart: unless-stopped
+    volumes:
+      - ./config/sonarr:/config
+      - ${DOWNLOADS_FOLDER}:/downloads
+      - ${TV_FOLDER}:/tv
+  # MeTube - YouTube Video Downloader    
+  metube:
+    container_name: ${CONTAINER_NAME_METUBE}
+    environment:
+      - DOWNLOAD_DIR=/downloads
+    image: alexta69/metube
+    networks:
+      - network
+    ports:
+      - ${METUBE_PORT}:8081/tcp
+    restart: unless-stopped
+    volumes:
+      - ${VIDEOS_FOLDER}:/downloads
+  # WatchTower - Docker Container Update Service    
+  watchtower:
+    container_name: watchtower
+    environment:
+      - TZ=${TIME_ZONE}
+    image: v2tec/watchtower
+    networks:
+      - network
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+  # MusicBrainz Picard - Music Tagger
+  picard:
+    container_name: ${CONTAINER_NAME_PICARD}
+    image: mikenye/picard
+    networks:
+      - network
+    ports:
+      - ${PICARD_PORT}:5800/tcp
+    volumes:
+      - ./config/picard:/config:rw
+      - ${MUSIC_FOLDER}:/storage:rw
+  # Organizr - Access Dashboard    
+  organizr:
+    container_name: ${CONTAINER_NAME_ORGANIZR}
+    environment: 
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
+      - TZ=${TIME_ZONE}
+    image: linuxserver/organizr
+    networks: 
+      - network
+    ports: 
+      - ${ORGANIZR_PORT}:80
+    restart: unless-stopped
+    volumes:
+      - ./config/organizr:/config
+
+# Create network for the applications
+networks:
+  network:
+    name: ${NETWORK_NAME}
+    driver: bridge
