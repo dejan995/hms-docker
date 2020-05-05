@@ -1,2 +1,2 @@
 # HMS-Docker
-Home Media Server running indocker containers.
+Home Media Server running in  docker containers.
