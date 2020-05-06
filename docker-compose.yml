@@ -185,6 +185,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./config/organizr:/config
+  # Nginx Proxy Manager    
   nginx-proxy-manager:
     image: jlesage/nginx-proxy-manager
     container_name: ${CONTAINER_NAME_NPM}
