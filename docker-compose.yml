@@ -185,7 +185,18 @@ services:
     restart: unless-stopped
     volumes:
       - ./config/organizr:/config
-
+  nginx-proxy-manager:
+    image: jlesage/nginx-proxy-manager
+    container_name: ${CONTAINER_NAME_NPM}
+    restart: unless-stopped
+    networks:
+      - network
+    ports:
+      - "${NPM_DASH_PORT}:8181"
+      - "80:8080"
+      - "443:4443"
+    volumes:
+      - ./config/npm:/config:rw
 # Create network for the applications
 networks:
   network:
