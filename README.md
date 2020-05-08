@@ -12,6 +12,7 @@ Everything that you need to edit is inside the .env file. You don't need to edit
 After you are done editing the .env file you can start the stack using the following command.
 
     docker-compose up -d
+    
 NOTE: Keep in mind that none of the applications are configured. You will have to go one by one and configure them to your specific needs.
 
 ## List of Applications
