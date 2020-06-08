@@ -198,8 +198,47 @@ services:
       - "443:4443"
     volumes:
       - ./config/npm:/config:rw
+  # Samba WebUI
+  smb-webmin:
+    build:
+        context: ./smbwebmin
+    container_name: ${CONTAINER_NAME_SAMBA}
+    restart: unless-stopped
+    image: smbwebmin:latest
+    hostname: ${SAMBA_HOSTNAME}
+    ports:
+        - ${SAMBA_WEBUI_PORT}:10000
+        - 137:137/udp
+        - 138:138/udp
+        - 139:139
+        - 445:445
+    volumes: 
+        - etc_webmin:/etc/webmin
+        - etc_samba:/etc/samba
+        - var_lib_samba:/var/lib/samba
+        - ${ROOT_SHARE_FOLDER}:/mnt    
 # Create network for the applications
 networks:
   network:
     name: ${NETWORK_NAME}
     driver: bridge
+# Define volumes for Samba WebUI
+volumes:
+    etc_webmin:
+      driver: local
+      driver_opts:
+        type: none
+        device: ${ETC_WEBMIN}
+        o: bind
+    etc_samba:
+        driver: local
+        driver_opts: 
+            type: none
+            device: ${ETC_SAMBA}
+            o: bind
+    var_lib_samba:
+        driver: local
+        driver_opts: 
+            type: none
+            device: ${VAR_LIB_SAMBA}
+            o: bind
