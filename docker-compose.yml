@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
     volumes:
       - ${MUSIC_FOLDER}:/music
-      - ./config/lidarr:/config
+      - /mnt/docker/lidarr:/config
       - ${DOWNLOADS_FOLDER}:/downloads
   # Bazarr - Subtitles Manager    
   bazarr:
@@ -33,7 +33,7 @@ services:
     volumes:
       - ${TV_FOLDER}:/tv:rw
       - ${MOVIES_FOLDER}:/movies:rw
-      - ./config/bazarr:/config:rw
+      - /mnt/docker/bazarr:/config:rw
   # Deluge - BitTorrent Client    
   deluge:
     container_name: ${CONTAINER_NAME_DELUGE}
@@ -52,7 +52,7 @@ services:
       - network
     restart: unless-stopped
     volumes:
-      - ./config/deluge:/config
+      - /mnt/docker/deluge:/config
       - ${DOWNLOADS_FOLDER}:/downloads
   # Emby - Media Server    
   emby:
@@ -68,7 +68,7 @@ services:
       - ${EMBY_PORT}:8096
     restart: unless-stopped
     volumes:
-      - ./config/emby:/config
+      - /mnt/docker/emby:/config
       - ${MOVIES_FOLDER}:/movies
       - ${MUSIC_FOLDER}:/music
       - ${TV_FOLDER}:/tv
@@ -86,7 +86,7 @@ services:
     restart: unless-stopped
     volumes:
       - ${TORRENTS_FOLDER}:/downloads
-      - ./config/jackett:/config
+      - /mnt/docker/jackett:/config
   # Portainer - Docker Manager    
   portainer:
     container_name: ${CONTAINER_NAME_PORTAINER}
@@ -99,7 +99,7 @@ services:
       - ${PORTAINER_PORT}:9000
     restart: unless-stopped
     volumes:
-      - ./config/portainer:/data:rw
+      - /mnt/docker/portainer:/data:rw
       - /var/run/docker.sock:/var/run/docker.sock:ro
   # Radarr - Movies Manager    
   radarr:
@@ -117,7 +117,7 @@ services:
     volumes:
       - ${MOVIES_FOLDER}:/movies
       - ${DOWNLOADS_FOLDER}:/downloads
-      - ./config/radarr:/config
+      - /mnt/docker/radarr:/config
   # Sonarr - TV Shows Manager    
   sonarr:
     container_name: ${CONTAINER_NAME_SONARR}
@@ -132,7 +132,7 @@ services:
       - ${SONARR_PORT}:8989
     restart: unless-stopped
     volumes:
-      - ./config/sonarr:/config
+      - /mnt/docker/sonarr:/config
       - ${DOWNLOADS_FOLDER}:/downloads
       - ${TV_FOLDER}:/tv
   # MeTube - YouTube Video Downloader    
@@ -168,7 +168,7 @@ services:
     ports:
       - ${PICARD_PORT}:5800/tcp
     volumes:
-      - ./config/picard:/config:rw
+      - /mnt/docker/picard:/config:rw
       - ${MUSIC_FOLDER}:/storage:rw
   # Organizr - Access Dashboard    
   organizr:
@@ -184,7 +184,7 @@ services:
       - ${ORGANIZR_PORT}:80
     restart: unless-stopped
     volumes:
-      - ./config/organizr:/config
+      - /mnt/docker/organizr:/config
   # Nginx Proxy Manager    
   nginx-proxy-manager:
     image: jlesage/nginx-proxy-manager
@@ -197,7 +197,7 @@ services:
       - "80:8080"
       - "443:4443"
     volumes:
-      - ./config/npm:/config:rw
+      - /mnt/docker/npm:/config:rw
   # Samba WebUI
   smb-webmin:
     build:
