@@ -28,7 +28,8 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 10. Watchtower - Docker Container Update Service
 11. MusicBrainz Picard - Music Tagger
 12. Organizr - Access Dashboard
-13. Nginx Proxy Manager  
+13. Nginx Proxy Manager
+14. Samba WebUI  
 
 ## TO-DO
 1. Make the Install Guide more detailed.
