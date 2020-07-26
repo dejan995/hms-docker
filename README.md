@@ -34,4 +34,4 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 ## TO-DO
 1. Make the Install Guide more detailed.
 2. Provide configuration instructions for the applications.
-3. Add Samba Server to the applications provided.
+~~3. Add Samba Server to the applications provided.~~
