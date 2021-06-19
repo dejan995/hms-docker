@@ -19,7 +19,7 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 1. Lidarr - Music Manager
 2. Bazarr - Subtitles Manager
 3. Deluge - BitTorrent Client
-~~4. Emby - Media Server~~
+4. ~~Emby - Media Server~~
 4. Jellyfin - Media Server
 5. Jackett - Torrent Indexer
 6. Portainer - Docker Manager
