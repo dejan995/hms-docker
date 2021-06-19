@@ -19,7 +19,8 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 1. Lidarr - Music Manager
 2. Bazarr - Subtitles Manager
 3. Deluge - BitTorrent Client
-4. Emby - Media Server
+~~4. Emby - Media Server~~
+4. Jellyfin - Media Server
 5. Jackett - Torrent Indexer
 6. Portainer - Docker Manager
 7. Radarr - Movies Manager
@@ -29,7 +30,13 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 11. MusicBrainz Picard - Music Tagger
 12. Organizr - Access Dashboard
 13. Nginx Proxy Manager
-14. Samba WebUI  
+14. Samba WebUI
+
+## Updates
+### 20.06.2021
+1. Emby Media server is replaced with Jellyfin Media Server.
+2. The Samba Server is hosted on DockerHub, no need to build it locally anymore.
+3. Added File managment GUI (Filemin application from Webmin). The way it is setup, it will only provide access to the Root Folder that is set in the .env file.
 
 ## TO-DO
 1. Make the Install Guide more detailed.
