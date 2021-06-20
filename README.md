@@ -8,7 +8,8 @@ This is achieved through the use of Docker Compose
 3. Latest Docker Compose for your OS.
 
 ## Install Guide
-#### If you are running Ubuntu you can use the install.sh script to install Docker, setup some basic folder structures and start all of the services.
+#### Ubuntu:
+If you are running Ubuntu you can use the install.sh script to install Docker, setup some basic folder structures and start all of the services.
 1. Make the file executable.
 ```console
     chmod +x install.sh
@@ -20,7 +21,7 @@ This is achieved through the use of Docker Compose
 ``` 
 For more instructions go to the [Manual](docs/MANUAL.md).
 
-#### Other Operating Systems
+#### Other Operating Systems:
 Everything that you need to edit is inside the .env file. You don't need to edit anything inside the docker-compose.yml file (only if you want all of the services provided, otherwise you will need to comment out the applications you don't want inside the docker-compose file).
 
 For more instructions go to the [Manual](docs/MANUAL.md).
