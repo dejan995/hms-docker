@@ -12,4 +12,4 @@ pool:
 steps:
 - task: gitsync@1
   inputs:
-    GitRepoUrl: 'https://${MYPAT}@github.com/dejan995/hms-docker.git'
+    GitRepoUrl: 'https://$(MYPAT)@github.com/dejan995/hms-docker.git'
