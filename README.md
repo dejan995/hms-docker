@@ -8,7 +8,15 @@ This is achieved through the use of Docker Compose
 3. Latest Docker Compose for your OS.
 
 ## Install Guide
-#### If you are running Ubuntu you can use the install.sh script to install docker and setup some basic folder structures.
+#### If you are running Ubuntu you can use the install.sh script to install docker, setup some basic folder structures and start all of the services.
+1. Make the file executable.
+
+    chmod +x install.sh
+2. Run the script.
+
+    ./install.sh   
+    
+
 Everything that you need to edit is inside the .env file. You don't need to edit anything inside the docker-compose.yml file.
 After you are done editing the .env file you can start the stack using the following command.
 
