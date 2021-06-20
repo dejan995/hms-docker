@@ -13,4 +13,4 @@
 | MeTube - YouTube Downloader  | 8081  |
 | MusicBrainz Picard - Music Tagger  | 5800  |
 | Heimdall - Access Dashboard  | 9983  |
-| Filemin - Filemanager  | 3333  |
+| Filemin - File Manager  | 3333  |

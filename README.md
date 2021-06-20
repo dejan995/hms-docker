@@ -64,6 +64,6 @@ You can see a list of all services and the ports they are using [here](docs/port
 5. Added an Install Script for Ubuntu users.
 
 ## TO-DO
-- [ ] Make the Install Guide more detailed.
+- [x] Make the Install Guide more detailed.
 - [ ] Provide configuration instructions for the applications.
 - [x] Add Samba Server to the applications provided.
