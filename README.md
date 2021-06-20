@@ -10,11 +10,14 @@ This is achieved through the use of Docker Compose
 ## Install Guide
 #### If you are running Ubuntu you can use the install.sh script to install docker, setup some basic folder structures and start all of the services.
 1. Make the file executable.
-
+```console
     chmod +x install.sh
-2. Run the script.
+```
 
-    ./install.sh   
+2. Run the script.
+```console
+    ./install.sh
+``` 
     
 
 Everything that you need to edit is inside the .env file. You don't need to edit anything inside the docker-compose.yml file.
