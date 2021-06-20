@@ -57,3 +57,9 @@ sudo mkdir -p /mnt/docker/smbwebmin/samba/var/lib
 **NOTE: If you are using the install.sh script, all necessery folders will be created automatically for you. For now there is no option to change these if you are using the script.**
 
 **NOTE: For now this project can't utilize network shares on it's own. If you want to store your media on a share you will have to set it up yourself and use the options in the .env to point them in the right locations.** 
+
+## Applicatiion Specific Settings
+Here you can change the name of the containers and the port that they will be accessable on.
+I recommend you keep these setting as is.
+All containers are named properly and all of them use the original ports.
+You can see a list of all services and their ports [here](docs/ports.md).
