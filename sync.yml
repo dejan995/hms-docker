@@ -10,7 +10,13 @@ trigger:
 pool:
   vmImage: windows-latest
 
+jobs:
+ - job: Sync
+   variables:
+   - group: MYPAT
+   - name: environment
+     value: Sync
 steps:
-- task: gitsync@1
-  inputs:
-    GitRepoUrl: 'https://$(myPAT)@github.com/dejan995/hms-docker.git'
+  - task: gitsync@1
+    inputs:
+    GitRepoUrl: 'https://$(MYPAT)@github.com/dejan995/hms-docker.git'
