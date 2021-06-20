@@ -35,7 +35,7 @@ sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
 echo 'Start Docker Services'
 sudo service docker start
 
-#Creates the main docker folder for storing configurations
+#Creates the Main docker folder for storing configurations
 echo 'Creating Main Docker Configuration Folder'
 sudo rm -R /mnt/docker
 sudo mkdir /mnt/docker
@@ -45,3 +45,24 @@ echo 'Creating Samba Configuration Folders'
 sudo mkdir -p /mnt/docker/smbwebmin/webmin
 sudo mkdir -p /mnt/docker/smbwebmin/samba/etc
 sudo mkdir -p /mnt/docker/smbwebmin/samba/var/lib
+
+#Creates the Main Media folder for storing media files.
+echo 'Creating Main Media Folder'
+sudo rm -R /mnt/media
+sudo mkdir /mnt/media
+echo 'Creating Downloads Folder'
+sudo mkdir -p /mnt/media/downloads/complete
+echo 'Creating TV shows Folder'
+sudo mkdir -p /mnt/media/tv
+echo 'Creating Movies Folder'
+sudo mkdir -p /mnt/media/movies
+echo 'Creating Music Folder'
+sudo mkdir -p /mnt/media/music
+echo 'Creating Videos Folder'
+sudo mkdir -p /mnt/media/videos
+echo 'Creating Torrents Folder'
+sudo mkdir -p /mnt/media/torrents
+
+#Starts ALL Docker Containers
+echo 'Starting Docker Containers'
+sudo docker-compose up -d
