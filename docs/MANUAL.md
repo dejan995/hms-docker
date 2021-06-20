@@ -36,8 +36,10 @@ NETWORK_NAME=hms-network
 ```
 ## Global Volumes
 These are the paths where all of the data will be stored. By default everything is located inside the **/mnt** folder. Inside this folder you will have two additional folders:
+
 **1. /mnt/docker**
 **2. /mnt/media**
+
 The **/mnt/docker** folder will contain all of the configuration files for the applications, divided in folders with the application name.
 
 The **/mnt/media** folder will contain all of the media files, divided in folders by the type of media they store.
