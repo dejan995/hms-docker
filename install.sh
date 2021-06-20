@@ -2,15 +2,10 @@
 
 #Docker Install
 echo 'Removing previous installations of Docker'
-sudo apt-get update -y &>>/dev/null
-sudo apt-get install bridge-utils -y &>>/dev/null 
 sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd runc &>>/dev/null
 sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce containerd runc &>>/dev/null
 sudo rm -rf /var/lib/docker /etc/docker
-sudo groupdel docker
 sudo rm -rf /var/run/docker.sock
-sudo ifconfig docker0 down
-sudo brctl delbr docker0
 
 echo 'Updating APT Repositories'
 sudo apt-get update -y &>>/dev/null
