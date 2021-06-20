@@ -62,4 +62,4 @@ sudo mkdir -p /mnt/docker/smbwebmin/samba/var/lib
 Here you can change the name of the containers and the port that they will be accessable on.
 I recommend you keep these setting as is.
 All containers are named properly and all of them use the original ports.
-You can see a list of all services and their ports [here](docs/ports.md).
+You can see a list of all services and their ports [here](ports.md).

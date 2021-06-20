@@ -53,6 +53,8 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 13. Nginx Proxy Manager
 14. Samba WebUI
 
+You can see a list of all services and the ports they are using [here](docs/ports.md).
+
 ## Updates
 ### 20.06.2021
 1. Emby Media server is replaced with Jellyfin Media Server.
