@@ -14,11 +14,22 @@ GROUP_ID=1000
 ```
 
 ## Time Zone
-This is to set the correct Time Zone to the applications that need it.
+This is to set the correct Time Zone for the applications that need it.
 
-You can see all available time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Look in the third column of the table - "TZ database name"
+You can see all available time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Look in the third column of the table - "TZ database name".
 
 Since I'm in Macedonia I'm using "Europe/Skopje" - Skopje is the capital city of my country.
 ```code
 TIME_ZONE=Europe/Skopje
+```
+
+## Network Name
+This is to set the name for the Docker Virtual Network.
+This one is not really important. You can use anything here.
+
+**NOTE: Do not use the name of an alreay existing Docker Network.**
+
+**Advice: Keep this one as is. For better Docker managment down the line, if need it.**
+```code
+NETWORK_NAME=hms-network
 ```
