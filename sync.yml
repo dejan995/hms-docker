@@ -4,9 +4,6 @@
 # https://aka.ms/yaml
 name : Sync
 
-variables:
- - MYPAT=$(myPATH)
-
 trigger:
 - master
 
@@ -16,4 +13,4 @@ pool:
 steps:
 - task: gitsync@1
   inputs:
-    GitRepoUrl: 'https://$(MYPAT)@github.com/dejan995/hms-docker.git'
+    GitRepoUrl: 'https://$(myPAT)@github.com/dejan995/hms-docker.git'
