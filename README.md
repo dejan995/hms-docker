@@ -8,6 +8,7 @@ This is achieved through the use of Docker Compose
 3. Latest Docker Compose for your OS.
 
 ## Install Guide
+If you are running Ubuntu you can use the install.sh script to install docker and setup some basic folder structures.
 Everything that you need to edit is inside the .env file. You don't need to edit anything inside the docker-compose.yml file.
 After you are done editing the .env file you can start the stack using the following command.
 
@@ -39,6 +40,7 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 2. The Samba Server is hosted on DockerHub, no need to build it locally anymore.
 3. Added File managment GUI (Filemin application from Webmin). The way it is setup, it will only provide access to the Root Folder that is set in the .env file.
 4. Organizr is replaced with Heimdall.
+5. Added an Install Script for Ubuntu users.
 
 ## TO-DO
 1. Make the Install Guide more detailed.
