@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #Docker Install
-echo 'Removing previos installations of Docker'
-sudo apt-get update -y &>>/dev/null &>>/dev/null
-sudo apt-get install bridge-utils -y 
+echo 'Removing previous installations of Docker'
+sudo apt-get update -y &>>/dev/null
+sudo apt-get install bridge-utils -y &>>/dev/null 
 sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd runc &>>/dev/null
 sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce containerd runc &>>/dev/null
 sudo rm -rf /var/lib/docker /etc/docker
@@ -31,6 +31,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y &>>/dev/null
 echo 'Installing Docker-Compose'
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &>>/dev/null
 sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
+
+echo 'Start Docker Services'
+sudo service docker start
 
 #Creates the main docker folder for storing configurations
 echo 'Creating Main Docker Configuration Folder'
