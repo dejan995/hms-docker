@@ -28,7 +28,8 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 9. MeTube - YouTube Video Downloader
 10. Watchtower - Docker Container Update Service
 11. MusicBrainz Picard - Music Tagger
-12. Organizr - Access Dashboard
+12. ~~Organizr - Access Dashboard~~
+12. Heimdall - Access Dashboard
 13. Nginx Proxy Manager
 14. Samba WebUI
 
@@ -37,6 +38,7 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 1. Emby Media server is replaced with Jellyfin Media Server.
 2. The Samba Server is hosted on DockerHub, no need to build it locally anymore.
 3. Added File managment GUI (Filemin application from Webmin). The way it is setup, it will only provide access to the Root Folder that is set in the .env file.
+4. Organizr is replaced with Heimdall.
 
 ## TO-DO
 1. Make the Install Guide more detailed.

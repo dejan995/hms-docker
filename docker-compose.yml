@@ -170,21 +170,21 @@ services:
     volumes:
       - /mnt/docker/picard:/config:rw
       - ${MUSIC_FOLDER}:/storage:rw
-  # Organizr - Access Dashboard    
-  organizr:
-    container_name: ${CONTAINER_NAME_ORGANIZR}
+  # Heimdall - Access Dashboard    
+  heimdall:
+    container_name: ${CONTAINER_NAME_HEIMDALL}
     environment: 
       - PUID=${USER_ID}
       - PGID=${GROUP_ID}
       - TZ=${TIME_ZONE}
-    image: linuxserver/organizr
+    image: linuxserver/heimdall
     networks: 
       - network
     ports: 
-      - ${ORGANIZR_PORT}:80
+      - ${HEIMDALL_PORT}:80
     restart: unless-stopped
     volumes:
-      - /mnt/docker/organizr:/config
+      - /mnt/docker/heimdall:/config
   # Nginx Proxy Manager    
   nginx-proxy-manager:
     image: jlesage/nginx-proxy-manager
