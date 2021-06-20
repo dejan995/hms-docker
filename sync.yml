@@ -3,6 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 name : Sync
+
+variables:
+ - MYPAT=$(myPATH)
+
 trigger:
 - master
 
