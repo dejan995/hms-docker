@@ -12,6 +12,5 @@ pool:
 
 steps:
 - task: gitsync@1
-- task: gitsync@1
   inputs:
     GitRepoUrl: 'https://$(myPAT)@github.com/dejan995/hms-docker.git'
