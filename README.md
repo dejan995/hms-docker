@@ -8,7 +8,7 @@ This is achieved through the use of Docker Compose
 3. Latest Docker Compose for your OS.
 
 ## Install Guide
-#### If you are running Ubuntu you can use the install.sh script to install docker, setup some basic folder structures and start all of the services.
+#### If you are running Ubuntu you can use the install.sh script to install Docker, setup some basic folder structures and start all of the services.
 1. Make the file executable.
 ```console
     chmod +x install.sh
@@ -18,12 +18,12 @@ This is achieved through the use of Docker Compose
 ```console
     ./install.sh
 ``` 
-    
 
 Everything that you need to edit is inside the .env file. You don't need to edit anything inside the docker-compose.yml file.
 After you are done editing the .env file you can start the stack using the following command.
-
+```console
     docker-compose up -d
+```
     
 NOTE: Keep in mind that none of the applications are configured. You will have to go one by one and configure them to your specific needs.
 
@@ -54,6 +54,6 @@ NOTE: Keep in mind that none of the applications are configured. You will have t
 5. Added an Install Script for Ubuntu users.
 
 ## TO-DO
-1. Make the Install Guide more detailed.
-2. Provide configuration instructions for the applications.
-3. ~~Add Samba Server to the applications provided.~~
+- [ ] Make the Install Guide more detailed.
+- [ ] Provide configuration instructions for the applications.
+- [x] Add Samba Server to the applications provided.
