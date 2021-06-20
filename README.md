@@ -20,6 +20,9 @@ This is achieved through the use of Docker Compose
 ``` 
 
 Everything that you need to edit is inside the .env file. You don't need to edit anything inside the docker-compose.yml file.
+
+For more instructions go to the [Manual](docs/MANUAL.md)
+
 After you are done editing the .env file you can start the stack using the following command.
 ```console
     docker-compose up -d
