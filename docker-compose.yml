@@ -56,7 +56,7 @@ services:
       - ${DOWNLOADS_FOLDER}:/downloads
   # Jellyfin - Media Server    
   Jellyfin:
-    container_name: ${CONTAINER_NAME_Jellyfin}
+    container_name: ${CONTAINER_NAME_JELLYFIN}
     environment:
       - PUID=${USER_ID}
       - PGID=${GROUP_ID}
