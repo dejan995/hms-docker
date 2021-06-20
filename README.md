@@ -19,6 +19,9 @@ If you are running Ubuntu you can use the install.sh script to install Docker, s
 ```console
     ./install.sh
 ``` 
+
+**NOTE: If the install.sh scripts fails, try it a couple of more times. I don't know why it is doing that, as soon as I find out there will be a fix.**
+
 For more instructions go to the [Manual](docs/MANUAL.md).
 
 #### Other Operating Systems:
