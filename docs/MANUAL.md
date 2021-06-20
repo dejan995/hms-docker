@@ -45,4 +45,5 @@ The **/mnt/docker** folder will contain all of the configuration files for the a
 The **/mnt/media** folder will contain all of the media files, divided in folders by the type of media they store.
 
 **NOTE: If you are using the install.sh script, these folders will be created automatically for you. For now there is no option to change these if you are using the script.**
+
 **NOTE: For now this project can't utilize network shares on it's own. If you want to store your media on a share you will have to set it up yourself and use the options in the .env to point them in the right locations.** 
