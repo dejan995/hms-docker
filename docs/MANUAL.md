@@ -34,6 +34,17 @@ This one is not really important. You can use anything here.
 ```code
 NETWORK_NAME=hms-network
 ```
+
+### Webmin Password
+This will set the password for the Webmin UI which is used to manage Filemin and the Samba server.
+The default password will be "admin", even if you decide to remove this part of the configuration.
+It is set up that way because Webmin acctualy needs a password to function properly.
+
+**Note: It is strongly recomended to change the default password.**
+```code
+WEBMIN_PASSWORD=admin
+```
+
 ## Global Volumes
 These are the paths where all of the data will be stored. By default everything is located inside the **/mnt** folder. Inside this folder you will have two additional folders:
 

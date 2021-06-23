@@ -34,7 +34,7 @@ After you are done editing the .env file you can start the stack using the follo
     docker-compose up -d
 ```
     
-NOTE: Keep in mind that none of the applications are configured. You will have to go one by one and configure them to your specific needs.
+**NOTE: Keep in mind that none of the applications are configured. You will have to go one by one and configure them to your specific needs.**
 
 For more instructions go to the [Manual](docs/MANUAL.md).
 
@@ -59,6 +59,9 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 
 ## Updates
+### 23.06.2021
+1. Fixed issue where the password for the Webmin UI, for Filemin and Samba, was not being changed. You can now set the password from a variable in the ".env" file.
+
 ### 20.06.2021
 1. Emby Media server is replaced with Jellyfin Media Server.
 2. The Samba Server is hosted on DockerHub, no need to build it locally anymore.
