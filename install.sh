@@ -83,6 +83,13 @@ echo '####################################################'
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &>>/dev/null
 sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
 
+# Start Docker
+echo '####################################################'
+echo 'Starting Docker'
+echo '####################################################'
+sudo service docker stop
+sudo service docker start
+
 # Creates the Main docker folder for storing configurations
 echo '####################################################'
 echo 'Creating Main Docker Configuration Folder'
