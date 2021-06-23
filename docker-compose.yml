@@ -108,7 +108,7 @@ services:
       - PUID=${USER_ID}
       - PGID=${GROUP_ID}
       - TZ=${TIME_ZONE}
-    image: linuxserver/radarr:preview
+    image: linuxserver/radarr:latest
     networks:
       - network
     ports:
@@ -125,7 +125,7 @@ services:
       - PUID=${USER_ID}
       - PGID=${GROUP_ID}
       - TZ=${TIME_ZONE}
-    image: linuxserver/sonarr:preview
+    image: linuxserver/sonarr:latest
     networks:
       - network
     ports:

@@ -77,7 +77,7 @@ sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
 echo '####################################################'
 echo 'Start Docker Services'
 echo '####################################################'
-sudo service docker start
+sudo systemctl start docker.service
 
 # Creates the Main docker folder for storing configurations
 echo '####################################################'
