@@ -92,7 +92,7 @@ services:
     container_name: ${CONTAINER_NAME_PORTAINER}
     environment: 
       - TZ=${TIME_ZONE}
-    image: portainer/portainer:latest
+    image: portainer/portainer-ce:latest
     networks:
       - network
     ports:
