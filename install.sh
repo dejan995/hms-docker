@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Removin previos Docker Install
-echo '####################################################'
-echo 'Removing previous installations of Docker'
-echo '####################################################'
-sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd runc &>>/dev/null
-sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce containerd runc &>>/dev/null
-echo '####################################################'
-echo 'Removing Docker Compose'
-echo '####################################################'
-sudo rm /usr/local/bin/docker-compose
-
 # Stop all running containers
 echo '####################################################'
 echo 'Stopping running containers (if available)...'
@@ -40,6 +29,17 @@ echo '####################################################'
 echo 'Updating APT Repositories'
 echo '####################################################'
 sudo apt-get update -y &>>/dev/null
+
+# Removing previos Docker Install
+echo '####################################################'
+echo 'Removing previous installations of Docker'
+echo '####################################################'
+sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd runc &>>/dev/null
+sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce containerd runc &>>/dev/null
+echo '####################################################'
+echo 'Removing Docker Compose'
+echo '####################################################'
+sudo rm /usr/local/bin/docker-compose
 
 # Install Docker requierments
 echo '####################################################'
