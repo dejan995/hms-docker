@@ -28,7 +28,8 @@ sudo docker volume rm $(docker volume ls -q) &>>/dev/null
 echo '####################################################'
 echo 'Killing previous Docker processes'
 echo '####################################################'
-sudo ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh 
+sudo ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh
+sudo rm /var/run/docker.pid
 
 # Updating APT Repos
 echo '####################################################'
@@ -42,8 +43,8 @@ echo 'Removing previous installations of Docker'
 echo '####################################################'
 sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd runc &>>/dev/null
 sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce containerd runc &>>/dev/null
- sudo rm -rf /var/lib/docker
- sudo rm -rf /var/lib/containerd
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
 
 echo '####################################################'
 echo 'Removing Docker Compose'
