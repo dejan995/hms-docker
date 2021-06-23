@@ -73,6 +73,12 @@ echo '####################################################'
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &>>/dev/null
 sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
 
+# Kill previos Docker process
+echo '####################################################'
+echo 'Killing previous Docker processes'
+echo '####################################################'
+sudo ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh 
+
 # Start Docker
 echo '####################################################'
 echo 'Start Docker Services'
