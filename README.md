@@ -9,6 +9,9 @@ This is achieved through the use of Docker Compose
 
 ## Install Guide
 #### Ubuntu:
+
+**NOTE: This is only for a fresh install on Ubuntu**
+
 If you are running Ubuntu you can use the install.sh script to install Docker, setup some basic folder structures and start all of the services.
 1. Make the file executable.
 ```console
@@ -19,8 +22,6 @@ If you are running Ubuntu you can use the install.sh script to install Docker, s
 ```console
     ./install.sh
 ``` 
-
-**NOTE: If the install.sh scripts fails, try it a couple of more times. I don't know why it is doing that, as soon as I find out there will be a fix.**
 
 For more instructions go to the [Manual](docs/MANUAL.md).
 
@@ -61,6 +62,7 @@ You can see a list of all services and the ports they are using [here](docs/port
 ## Updates
 ### 23.06.2021
 1. Fixed issue where the password for the Webmin UI, for Filemin and Samba, was not being changed. You can now set the password from a variable in the ".env" file.
+2. Fixed the install.sh script. It can now safely be used on a freshly installed Ubuntu machine.
 
 ### 20.06.2021
 1. Emby Media server is replaced with Jellyfin Media Server.
