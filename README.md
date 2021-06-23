@@ -63,6 +63,7 @@ You can see a list of all services and the ports they are using [here](docs/port
 ### 23.06.2021
 1. Fixed issue where the password for the Webmin UI, for Filemin and Samba, was not being changed. You can now set the password from a variable in the ".env" file.
 2. Fixed the install.sh script. It can now safely be used on a freshly installed Ubuntu machine.
+3. Added generate_config.sh script. With this script you can generate your own .env file.
 
 ### 20.06.2021
 1. Emby Media server is replaced with Jellyfin Media Server.
