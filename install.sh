@@ -24,6 +24,12 @@ echo 'Revoming docker container volumes (if any)'
 echo '####################################################'
 sudo docker volume rm $(docker volume ls -q) &>>/dev/null
 
+# Kill previos Docker process
+echo '####################################################'
+echo 'Killing previous Docker processes'
+echo '####################################################'
+sudo ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh 
+
 # Updating APT Repos
 echo '####################################################'
 echo 'Updating APT Repositories'
@@ -36,6 +42,9 @@ echo 'Removing previous installations of Docker'
 echo '####################################################'
 sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd runc &>>/dev/null
 sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce containerd runc &>>/dev/null
+ sudo rm -rf /var/lib/docker
+ sudo rm -rf /var/lib/containerd
+
 echo '####################################################'
 echo 'Removing Docker Compose'
 echo '####################################################'
@@ -45,7 +54,7 @@ sudo rm /usr/local/bin/docker-compose &>>/dev/null
 echo '####################################################'
 echo 'Installing Docker Requierments'
 echo '####################################################'
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y &>>/dev/null
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common lsb-release -y &>>/dev/null
 
 # Set up Docker Repo
 echo '####################################################'
@@ -72,18 +81,6 @@ echo 'Installing Docker-Compose'
 echo '####################################################'
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &>>/dev/null
 sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
-
-# Kill previos Docker process
-echo '####################################################'
-echo 'Killing previous Docker processes'
-echo '####################################################'
-sudo ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh 
-
-# Start Docker
-echo '####################################################'
-echo 'Start Docker Services'
-echo '####################################################'
-sudo systemctl start docker.service
 
 # Creates the Main docker folder for storing configurations
 echo '####################################################'
