@@ -225,10 +225,7 @@ services:
     ports:
         - ${FILEMIN_PORT}:10000
     volumes: 
-        - ${ROOT_SHARE_FOLDER}:/mnt
-    environment: 
-        - login=dejan
-        - password=072gembird   
+        - ${ROOT_SHARE_FOLDER}:/mnt 
 # Create network for the applications
 networks:
   network:
