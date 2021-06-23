@@ -204,6 +204,8 @@ services:
     container_name: ${CONTAINER_NAME_SAMBA}
     restart: unless-stopped
     hostname: ${SAMBA_HOSTNAME}
+    networks:
+      - network
     ports:
         - ${SAMBA_WEBUI_PORT}:10000
         - 137:137/udp
