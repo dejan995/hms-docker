@@ -4,25 +4,25 @@
 echo '####################################################'
 echo 'Stopping running containers (if available)...'
 echo '####################################################'
-sudo docker stop $(docker ps -aq)
+sudo docker stop $(docker ps -aq) &>>/dev/null
 
 # Remove all stopped containers
 echo '####################################################'
 echo 'Removing containers ..'
 echo '####################################################'
-sudo docker rm $(docker ps -aq)
+sudo docker rm $(docker ps -aq) &>>/dev/null
 
 # Remove all images
 echo '####################################################'
 echo 'Removing images ...'
 echo '####################################################'
-sudo docker rmi $(docker images -q)
+sudo docker rmi $(docker images -q) &>>/dev/null
 
 # Remove all stray volumes if any
 echo '####################################################'
 echo 'Revoming docker container volumes (if any)'
 echo '####################################################'
-sudo docker volume rm $(docker volume ls -q)
+sudo docker volume rm $(docker volume ls -q) &>>/dev/null
 
 # Updating APT Repos
 echo '####################################################'
@@ -39,7 +39,7 @@ sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce cont
 echo '####################################################'
 echo 'Removing Docker Compose'
 echo '####################################################'
-sudo rm /usr/local/bin/docker-compose
+sudo rm /usr/local/bin/docker-compose &>>/dev/null
 
 # Install Docker requierments
 echo '####################################################'
@@ -83,7 +83,7 @@ sudo service docker start
 echo '####################################################'
 echo 'Creating Main Docker Configuration Folder'
 echo '####################################################'
-sudo rm -R /mnt/docker
+sudo rm -R /mnt/docker &>>/dev/null
 sudo mkdir /mnt/docker
 
 # Creates configuration folders for Samba
@@ -98,7 +98,7 @@ sudo mkdir -p /mnt/docker/smbwebmin/samba/var/lib
 echo '####################################################'
 echo 'Creating Main Media Folder'
 echo '####################################################'
-sudo rm -R /mnt/media
+sudo rm -R /mnt/media &>>/dev/null
 sudo mkdir /mnt/media
 
 echo '####################################################'
