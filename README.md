@@ -76,3 +76,4 @@ You can see a list of all services and the ports they are using [here](docs/port
 - [x] Make the Install Guide more detailed.
 - [ ] Provide configuration instructions for the applications.
 - [x] Add Samba Server to the applications provided.
+
