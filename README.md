@@ -60,6 +60,9 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 
 ## Updates
+### 26.06.2021
+1. Updated Samba Configuration to reflect the updated docker image for it.
+
 ### 23.06.2021
 1. Fixed issue where the password for the Webmin UI, for Filemin and Samba, was not being changed. You can now set the password from a variable in the ".env" file.
 2. Fixed the install.sh script. It can now safely be used on a freshly installed Ubuntu machine.
