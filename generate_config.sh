@@ -156,9 +156,6 @@ TORRENTS_FOLDER=${TORRENTS_FOLDER}
 CONTAINER_NAME_SAMBA=smb-webmin
 SAMBA_WEBUI_PORT=5000
 SAMBA_HOSTNAME=samba.example.com
-ETC_WEBMIN=/mnt/docker/smbwebmin/webmin/
-ETC_SAMBA=/mnt/docker/smbwebmin/samba/etc/
-VAR_LIB_SAMBA=/mnt/docker/smbwebmin/samba/var/lib/
 
 # Nginx Proxy Manager Dashboard port
 # Replace 8181 with the port that you want your Nginx Proxy Manager Dashboard to be accessable on.
