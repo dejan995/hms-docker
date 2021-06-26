@@ -44,18 +44,19 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 2. Bazarr - Subtitles Manager
 3. Deluge - BitTorrent Client
 4. ~~Emby - Media Server~~
-4. Jellyfin - Media Server
-5. Jackett - Torrent Indexer
-6. Portainer - Docker Manager
-7. Radarr - Movies Manager
-8. Sonarr - TV Shows Manager
-9. MeTube - YouTube Video Downloader
-10. Watchtower - Docker Container Update Service
-11. MusicBrainz Picard - Music Tagger
-12. ~~Organizr - Access Dashboard~~
-12. Heimdall - Access Dashboard
-13. Nginx Proxy Manager
-14. Samba WebUI
+5. Jellyfin - Media Server
+6. Jackett - Torrent Indexer
+7. Portainer - Docker Manager
+8. Radarr - Movies Manager
+9. Sonarr - TV Shows Manager
+10. MeTube - YouTube Video Downloader
+11. Watchtower - Docker Container Update Service
+12. MusicBrainz Picard - Music Tagger
+13. ~~Organizr - Access Dashboard~~
+14. Heimdall - Access Dashboard
+15. Nginx Proxy Manager
+16. Samba WebUI
+17. Filemin - File Manager
 
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 
