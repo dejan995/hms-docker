@@ -227,6 +227,7 @@ services:
     ports:
         - ${FILEMIN_PORT}:10000
     volumes: 
+        - /mnt/docker/filemin:/data
         - ${ROOT_SHARE_FOLDER}:/mnt
     environment:
         - WEBMIN_PASSWORD=${WEBMIN_PASSWORD}
