@@ -61,14 +61,6 @@ echo '####################################################'
 sudo rm -R /mnt/docker &>>/dev/null
 sudo mkdir /mnt/docker
 
-# Creates configuration folders for Samba
-echo '####################################################'
-echo 'Creating Samba Configuration Folders'
-echo '####################################################'
-sudo mkdir -p /mnt/docker/smbwebmin/webmin
-sudo mkdir -p /mnt/docker/smbwebmin/samba/etc
-sudo mkdir -p /mnt/docker/smbwebmin/samba/var/lib
-
 # Creates the Main Media folder for storing media files.
 echo '####################################################'
 echo 'Creating Main Media Folder'
