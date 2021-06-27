@@ -61,6 +61,9 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 
 ## Updates
+### 27.06.2021
+1. Added option to change the default Webmin Username for Filemin and Samba.
+
 ### 26.06.2021
 1. Updated Samba Configuration to reflect the updated docker image for it.
 2. Updated Filemin Configuration to reflect the updated docker image for it.

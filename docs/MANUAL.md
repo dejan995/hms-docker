@@ -35,13 +35,14 @@ This one is not really important. You can use anything here.
 NETWORK_NAME=hms-network
 ```
 
-### Webmin Password
-This will set the password for the Webmin UI which is used to manage Filemin and the Samba server.
-The default password will be "admin", even if you decide to remove this part of the configuration.
-It is set up that way because Webmin acctualy needs a password to function properly.
+### Webmin Credentials
+This will set the username & password for the Webmin UI which is used to manage Filemin and the Samba server.
+The default username & password will be "admin", even if you decide to remove this part of the configuration.
+It is set up that way because Webmin acctualy needs a username & password to function properly.
 
-**Note: It is strongly recomended to change the default password.**
+**Note: It is strongly recomended to change the default credentials.**
 ```code
+WEBMIN_LOGIN=admin
 WEBMIN_PASSWORD=admin
 ```
 
