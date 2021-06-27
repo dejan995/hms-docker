@@ -103,10 +103,11 @@ TIME_ZONE=${TIME_ZONE}
 # Replace "hms-network" with the desired name of your network. !!! DO NOT USE A NAME OF A NETWORK THAT ALREADY EXISTS !!!
 NETWORK_NAME=${NETWORK_NAME}
 
-# This variable is used to set the password for Webmin, the GUI for Filemin and Samba.
-# If for any reason you remove this variable, the default password will be "admin".
-# It is strongly recomended that you change the default password here.
-WEBMIN_PASSWORD=${WEBMIN_PASSWORD}
+# These variables are used to set the username and password for Webmin, the GUI for Filemin and Samba.
+# If for any reason you remove these variables, the default username and password will be "admin".
+# It is strongly recomended that you change the default username and password here.
+WEBMIN_LOGIN=admin
+WEBMIN_PASSWORD=admin
 
 ############################## Global Volumes ##############################
 ########################## ..::USE FULL PATHS::.. ##########################

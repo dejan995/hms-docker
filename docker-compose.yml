@@ -215,7 +215,8 @@ services:
     volumes: 
         - /mnt/docker/smbwebmin:/data
         - ${ROOT_SHARE_FOLDER}:/mnt
-    environment: 
+    environment:
+        - WEBMIN_LOGIN=${WEBMIN_LOGIN} 
         - WEBMIN_PASSWORD=${WEBMIN_PASSWORD}
   # Filemin
   filemin:
@@ -230,6 +231,7 @@ services:
         - /mnt/docker/filemin:/data
         - ${ROOT_SHARE_FOLDER}:/mnt
     environment:
+        - WEBMIN_LOGIN=${WEBMIN_LOGIN} 
         - WEBMIN_PASSWORD=${WEBMIN_PASSWORD}
 
 # Create network for the applications
