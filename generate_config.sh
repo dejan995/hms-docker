@@ -83,6 +83,18 @@ echo 'This is the folder where your torrent files will be stored.'
 echo 'Replace "/mnt/media/torrents" with the path to your torrents folder.'
 read -p "Enter the location of your Torrents Folder: " -e -i '/mnt/media/torrents/' TORRENTS_FOLDER
 
+echo '############################################################################'
+
+echo 'This is the folder where your books will be stored.'
+echo 'Replace "/mnt/media/books" with the path to your books folder.'
+read -p "Enter the location of your Books Folder: " -e -i '/mnt/media/books/' BOOKS_FOLDER
+
+echo '############################################################################'
+
+echo 'This is the folder where your comics will be stored.'
+echo 'Replace "/mnt/media/comics" with the path to your comics folder.'
+read -p "Enter the location of your Comics Folder: " -e -i '/mnt/media/comics/' COMICS_FOLDER
+
 cat << EOF > env.conf
 ############################################################################
 ############################# System Variables #############################
@@ -146,6 +158,13 @@ VIDEOS_FOLDER=${VIDEOS_FOLDER}
 # Replace "/mnt/media/torrents" with the path to your torrents folder.
 TORRENTS_FOLDER=${TORRENTS_FOLDER}
 
+# This is the folder where your books will be stored.
+# Replace "/mnt/media/books" with the path to your books folder.
+BOOKS_FOLDER=${BOOKS_FOLDER}
+
+# This is the folder where your comics will be stored.
+# Replace "/mnt/media/comics" with the path to your comics folder.
+COMICS_FOLDER=${COMICS_FOLDER}
 
 ##############################################################################
 ####################### Application Specific Settings ########################
@@ -210,5 +229,15 @@ HEIMDALL_PORT=9983
 # Filemin - File Manager
 CONTAINER_NAME_FILEMIN=filemin
 FILEMIN_PORT=3333
+
+# Readarr - Books Manager
+CONTAINER_NAME_READARR=readarr
+READARR_PORT=8787
+
+# Ubooquity - Books & Comics Reader
+CONTAINER_NAME_UBOOQUITY=ubooquity
+UBOOQUITY_WEBUI_PORT=2202
+UBOOQUITY_ADMIN_PORT=2203
+MAX_MEM=512
 
 EOF

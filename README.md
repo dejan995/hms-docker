@@ -57,10 +57,16 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 15. Nginx Proxy Manager
 16. Samba WebUI
 17. Filemin - File Manager
+18. Readarr - Books Manager
+19. Ubooquity - Books & Comics Reader
 
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 
 ## Updates
+### 05.07.2021
+1. Added ***Readarr*** and ***Ubooquity*** for Books support.
+2. Changed all support files and documentation to reflect the addition of ***Readarr*** and ***Ubooquity***. 
+
 ### 27.06.2021
 1. Added option to change the default Webmin Username for Filemin and Samba.
 

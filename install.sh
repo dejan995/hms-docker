@@ -98,6 +98,16 @@ echo 'Creating Torrents Folder'
 echo '####################################################'
 sudo mkdir -p /mnt/media/torrents
 
+echo '####################################################'
+echo 'Creating Books Folder'
+echo '####################################################'
+sudo mkdir -p /mnt/media/books
+
+echo '####################################################'
+echo 'Creating Comics Folder'
+echo '####################################################'
+sudo mkdir -p /mnt/media/comics
+
 # Starts ALL Docker Containers
 echo '####################################################'
 echo 'Starting Docker Containers'

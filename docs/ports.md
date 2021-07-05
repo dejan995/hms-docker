@@ -16,6 +16,8 @@
 | MusicBrainz Picard - Music Tagger  | 5800  |
 | Heimdall - Access Dashboard  | 9983  |
 | Filemin - File Manager  | 3333  |
+| Readarr - Books Manager  | 8787  |
+| Ubooquity - Books & Comics Reader  | WEBUI:2202 / AdminUI:2203  |
 
 ## Hardcoded ports
 The following ports are hardcoded in the docker-compose.yml file and should **NOT** be changed.

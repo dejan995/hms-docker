@@ -233,7 +233,40 @@ services:
     environment:
         - WEBMIN_LOGIN=${WEBMIN_LOGIN} 
         - WEBMIN_PASSWORD=${WEBMIN_PASSWORD}
-
+  # Readarr - Books Manager
+  readarr:
+    image: vcxpz/readarr:latest
+    container_name: ${CONTAINER_NAME_READARR}
+    restart: unless-stopped
+    networks: 
+        - network
+    ports:
+        - ${READARR_PORT}:8787
+    volumes: 
+        - /mnt/docker/readarr:/config
+        - ${BOOKS_FOLDER}:/books
+        - ${DOWNLOADS_FOLDER}:/downloads
+  # Ubooquity - Books & Comics Reader  
+  ubooquity:
+    image: ghcr.io/linuxserver/ubooquity:latest	
+    container_name: ${CONTAINER_NAME_UBOOQUITY)
+    restart: unless-stopped
+    networks: 
+        - network
+    environment:
+        - PUID=${USER_ID}
+        - PGID=${GROUP_ID}
+        - TZ=${TIME_ZONE}
+        - MAXMEM=${MAX_MEM}
+    volumes:
+        - /mnt/docker/ubooquity:/config
+        - ${BOOKS_FOLDER}:/books
+        - ${COMICS_FOLDER}:/comics
+        - ${DOWNLOADS_FOLDER}:/files
+    ports:
+        - ${UBOOQUITY_WEBUI_PORT}:2202
+        - ${UBOOQUITY_ADMIN_PORT}:2203
+      
 # Create network for the applications
 networks:
   network:
