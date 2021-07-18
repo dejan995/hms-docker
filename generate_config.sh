@@ -27,6 +27,12 @@ read -p "Enter Network Name: " -e -i 'hms-network' NETWORK_NAME
 
 echo '############################################################################'
 
+echo 'This variable is used to set the username for Webmin, the GUI for Filemin and Samba.'
+echo 'If for any reason you remove this variable, the default username will be "admin".'
+read -p "Enter your Webmin UI username: " -e -i 'admin' WEBMIN_LOGIN
+
+echo '############################################################################'
+
 echo 'This variable is used to set the password for Webmin, the GUI for Filemin and Samba.'
 echo 'If for any reason you remove this variable, the default password will be "admin".'
 echo 'It is strongly recomended that you change the default password here.'
@@ -118,8 +124,8 @@ NETWORK_NAME=${NETWORK_NAME}
 # These variables are used to set the username and password for Webmin, the GUI for Filemin and Samba.
 # If for any reason you remove these variables, the default username and password will be "admin".
 # It is strongly recomended that you change the default username and password here.
-WEBMIN_LOGIN=admin
-WEBMIN_PASSWORD=admin
+WEBMIN_LOGIN=${WEBMIN_LOGIN}
+WEBMIN_PASSWORD=${WEBMIN_PASSWORD}
 
 ############################## Global Volumes ##############################
 ########################## ..::USE FULL PATHS::.. ##########################
