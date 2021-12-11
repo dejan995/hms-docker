@@ -1,5 +1,13 @@
 # Changelog
 ## Updates
+### 11.12.2021
+1. Replaced MeTube with YouTude Downloader - Material.
+2. Added ***Deemix*** for music downloading.
+3. Added ***Syncthing*** for syncing between local servers as well as remote servers. (The server you are syncing with also must have ***Syncthing*** installed on it.)
+4. Added ***OAuth2-Proxy*** for providing more secure authentication.
+5. Added ***Redis***, mainly to provide support and stability for ***OAuth2-Proxy***.
+6. Added script for generating the OAuth2-Proxy configuration file. (Use it only if the provider is Azure Active Directory)
+
 ### 18.07.2021
 1. Minor fixes to ***generate_config.sh***.
 2. Moved the ***Updates*** section to [CHANGELOG.md](CHANGELOG.md).

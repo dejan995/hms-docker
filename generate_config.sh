@@ -101,7 +101,13 @@ echo 'This is the folder where your comics will be stored.'
 echo 'Replace "/mnt/media/comics" with the path to your comics folder.'
 read -p "Enter the location of your Comics Folder: " -e -i '/mnt/media/comics/' COMICS_FOLDER
 
-cat << EOF > env.conf
+echo '############################################################################'
+
+echo 'This is the folder where your YouTube videos will be stored.'
+echo 'Replace "/mnt/media/youtube" with the path to your YouTube folder.'
+read -p "Enter the location of your YouTube Folder: " -e -i '/mnt/media/youtube/' YTDLM_FOLDER
+
+cat << EOF > .env
 ############################################################################
 ############################# System Variables #############################
 ############################################################################
@@ -172,6 +178,10 @@ BOOKS_FOLDER=${BOOKS_FOLDER}
 # Replace "/mnt/media/comics" with the path to your comics folder.
 COMICS_FOLDER=${COMICS_FOLDER}
 
+# This is the folder where your YouTube videos will be stored.
+# Replace "/mnt/media/youtube" with the path your YouTube folder.
+YTDLM_FOLDER=${YTDLM_FOLDER}
+
 ##############################################################################
 ####################### Application Specific Settings ########################
 #### With the variables bellow you can specify the name of the container #####
@@ -220,9 +230,9 @@ RADARR_PORT=7878
 CONTAINER_NAME_SONARR=sonarr
 SONARR_PORT=8989
 
-# MeTube - YouTube Downloader
-CONTAINER_NAME_METUBE=metube
-METUBE_PORT=8081
+# YouTube Downloader/Material - YouTube Downloader
+CONTAINER_NAME_YTDLM=youtubedl-material
+YTDLM_PORT=17442
 
 # MusicBrainz Picard - Music Tagger
 CONTAINER_NAME_PICARD=picard
@@ -245,5 +255,25 @@ CONTAINER_NAME_UBOOQUITY=ubooquity
 UBOOQUITY_WEBUI_PORT=2202
 UBOOQUITY_ADMIN_PORT=2203
 MAX_MEM=512
+
+# Deemix - Deezer Music Downloader
+CONTAINER_NAME_DEEMIX=Deemix
+DEEMIX_PORT=6595
+
+# Syncthing - Sync Manager
+CONTAINER_NAME_SYNC=syncthing
+SYNC_WEBUI_PORT=8384
+SYNC_PORT1=21027
+SYNC_PORT2=22000
+
+# OAuth2-Proxy - Authentication Provider
+CONTAINER_NAME_OAUTH2=oauth2-proxy
+OAUTH2_PORT_1=8080
+OAUTH2_PORT_2=4180
+REDIS_IP_HOST=127.0.0.1
+
+# Redis - Database and Cache (used by OAuth2-Proxy)
+CONTAINER_NAME_REDIS=redis
+REDIS_PORT=6379
 
 EOF

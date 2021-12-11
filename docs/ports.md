@@ -12,12 +12,16 @@
 | Portainer - Docker Manager  | 9000  |
 | Radarr - Movies Manager  | 7878  |
 | Sonarr - TV Shows Manager  | 8989  |
-| MeTube - YouTube Downloader  | 8081  |
+| YTDLM - YouTube Downloader  | 17442  |
 | MusicBrainz Picard - Music Tagger  | 5800  |
 | Heimdall - Access Dashboard  | 9983  |
 | Filemin - File Manager  | 3333  |
 | Readarr - Books Manager  | 8787  |
 | Ubooquity - Books & Comics Reader  | WEBUI:2202 / AdminUI:2203  |
+| Deemix - Deezer Music Downloader | 6595 |
+| Syncthing - Sync Manager | WEBUI:8384 / SYNC_PORT1:21027 / SYNC_PORT2:22000 |
+| OAuth2-Proxy - Authentication Provider | PORT1:8080 / PORT2:4180 |
+| Redis - Database and Cache (used by OAuth2-Proxy) | 6379 |
 
 ## Hardcoded ports
 The following ports are hardcoded in the docker-compose.yml file and should **NOT** be changed.

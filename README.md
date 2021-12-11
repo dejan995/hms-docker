@@ -8,17 +8,32 @@ This is achieved through the use of Docker Compose
 3. Latest Docker Compose for your OS.
 
 ## Install Guide
-#### Ubuntu:
+#### Ubuntu x64:
 
-**NOTE: This is only for a fresh install on Ubuntu**
+**NOTE: This is only for a fresh install on Ubuntu x64**
 
-If you are running Ubuntu you can use the install.sh script to install Docker, setup some basic folder structures and start all of the services.
+If you are running Ubuntu x64 you can use the install.sh script to install Docker, setup some basic folder structures and start all of the services.
 1. Make the file executable.
 ```console
     chmod +x install.sh
 ```
 2. Edit the .env file.
-3. Run the script.
+You can also use the generate_config.sh script file to automate this process.
+Keep in mind that using the script will overwrite any previous changes you might have made to the .env file manually.
+Before using the script make sure to make it an executable.
+```console
+    chmod +x generate_config.sh
+```
+4. ***Optional*** Use the generate_oauth2_config.sh script to generete the OAuth2-Proxy configuration file.
+Use the script ONLY if the authentication provider will be Azure Active Directory, otherwise edit the file manually.
+Running the script will overwrite any previous changes you might have made to the oauth2-proxy.cfg file manually.
+If you do not need 2FA Authentication, you can comment out the OAuth2-Proxy and Redis services from the docker-compose.yml file.
+Keep in mind, you will need to manually add the code from the npm_snip_oauth2.conf file to every service that will be protected with 2FA. You can do this in the Advanced tab of a Proxy Host in the Nginx Proxy Manager.
+Before running the script make sure to make it an executable.
+```console
+    chmod +x generate_oauth2_config.sh
+```
+3. Run the install script.
 ```console
     ./install.sh
 ``` 
@@ -49,16 +64,21 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 7. Portainer - Docker Manager
 8. Radarr - Movies Manager
 9. Sonarr - TV Shows Manager
-10. MeTube - YouTube Video Downloader
-11. Watchtower - Docker Container Update Service
-12. MusicBrainz Picard - Music Tagger
-13. ~~Organizr - Access Dashboard~~
-14. Heimdall - Access Dashboard
-15. Nginx Proxy Manager
-16. Samba WebUI
-17. Filemin - File Manager
-18. Readarr - Books Manager
-19. Ubooquity - Books & Comics Reader
+10. ~~MeTube - YouTube Video Downloader~~
+11. YouTube Downloader - Material
+12. Watchtower - Docker Container Update Service
+13. MusicBrainz Picard - Music Tagger
+14. ~~Organizr - Access Dashboard~~
+15. Heimdall - Access Dashboard
+16. Nginx Proxy Manager
+17. Samba WebUI
+18. Filemin - File Manager
+19. Readarr - Books Manager
+20. Ubooquity - Books & Comics Reader
+21. Deemix - Deezer Music Downloader
+22. Syncthing - Sync Manager
+23. OAuth2-Proxy - Authentication Provider
+24. Redis - Database and Cache (used by OAuth2-Proxy)
 
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 

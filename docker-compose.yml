@@ -135,19 +135,24 @@ services:
       - /mnt/docker/sonarr:/config
       - ${DOWNLOADS_FOLDER}:/downloads
       - ${TV_FOLDER}:/tv
-  # MeTube - YouTube Video Downloader    
-  metube:
-    container_name: ${CONTAINER_NAME_METUBE}
-    environment:
-      - DOWNLOAD_DIR=/downloads
-    image: alexta69/metube
+  # YouTube Downloader/Material - YouTube Downloader   
+  youtubedl-material:
+    image: tzahi12345/youtubedl-material:nightly 
+    container_name: ${CONTAINER_NAME_YTDLM}
+    restart: unless-stopped
     networks:
       - network
-    ports:
-      - ${METUBE_PORT}:8081/tcp
-    restart: unless-stopped
+    environment:
+      - UID=${USER_ID}
+      - GIG=${GROUP_ID}
     volumes:
-      - ${VIDEOS_FOLDER}:/downloads
+      - /mnt/docker/ytdlm:/app/appdata
+      - ${YTDLM_FOLDER}/video:/app/video
+      - ${YTDLM_FOLDER}/audio:/app/audio
+      - ${YTDLM_FOLDER}/subscriptions:/app/subscriptions
+      - ${YTDLM_FOLDER}/users:/app/users
+    ports:
+      - ${YTDLM_PORT}:17442
   # WatchTower - Docker Container Update Service    
   watchtower:
     container_name: watchtower
@@ -266,7 +271,62 @@ services:
     ports:
         - ${UBOOQUITY_WEBUI_PORT}:2202
         - ${UBOOQUITY_ADMIN_PORT}:2203
-      
+  # Deemix - Deezer Music Downloader
+  deemix:
+    image: registry.gitlab.com/bockiii/deemix-docker:latest
+    container_name: ${CONTAINER_NAME_DEEMIX}
+    restart: unless-stopped
+    networks:
+        - network
+    environment:
+        - PUID=${USER_ID}
+        - PGID=${GROUP_ID}
+    volumes:
+        - /mnt/docker/deemix:/config
+        - ${DOWNLOADS_FOLDER}:/downloads
+    ports:
+        - ${DEEMIX_PORT}:6595
+  # Syncthing - Sync Manager
+  syncthing:
+    image: linuxserver/syncthing:latest
+    container_name: ${CONTAINER_NAME_SYNC}
+    restart: unless-stopped
+    networks:
+        - network
+    environment:
+        - PUID=${USER_ID}
+        - PGID=${GROUP_ID}
+    volumes:
+        - /mnt/docker/syncthing:/config
+        - ${ROOT_SHARE_FOLDER}:/sync
+    ports:
+        - ${SYNC_WEBUI_PORT}:8384
+        - ${SYNC_PORT1}:21027
+        - ${SYNC_PORT2}:22000
+  # OAuth2-Proxy - Authentication Provider      
+  oauth2-proxy:
+    container_name: ${CONTAINER_NAME_OAUTH2}
+    image: bitnami/oauth2-proxy:latest
+    restart: unless-stopped
+    command: --config /oauth2-proxy.cfg
+    ports:
+        - ${OAUTH2_PORT_1}:8080
+        - ${OAUTH2_PORT_2}:4180
+    volumes:
+        - ./oauth2-proxy.cfg:/oauth2-proxy.cfg
+    environment:
+        - OAUTH2_PROXY_SESSION_STORE_TYPE=redis
+        - OAUTH2_PROXY_REDIS_CONNECTION_URL=redis://${REDIS_IP_HOST}:${REDIS_PORT}/0
+  # Redis - Database and Cache (used by OAuth2-Proxy)
+  redis:
+    container_name: ${CONTAINER_NAME_REDIS}
+    image: redis:latest
+    restart: unless-stopped
+    ports:
+        - ${REDIS_PORT}:6379
+    volumes:
+        - /mnt/docker/redis:/data    
+   
 # Create network for the applications
 networks:
   network:

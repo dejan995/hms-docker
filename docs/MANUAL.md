@@ -30,7 +30,7 @@ This one is not really important. You can use anything here.
 
 **NOTE: Do not use the name of an alreay existing Docker Network.**
 
-**ADVICE: Keep this one as is. For better Docker managment down the line, if need it.**
+**ADVICE: Keep this one as is. For better Docker managment down the line, if needed.**
 ```code
 NETWORK_NAME=hms-network
 ```
@@ -60,6 +60,6 @@ The **/mnt/media** folder will contain all of the media files, divided in folder
 
 ## Applicatiion Specific Settings
 Here you can change the name of the containers and the port that they will be accessable on.
-I recommend you keep these setting as is.
+I recommend you keep these settings as is.
 All containers are named properly and all of them use the original ports.
 You can see a list of all services and their ports [here](ports.md).

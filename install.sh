@@ -108,6 +108,11 @@ echo 'Creating Comics Folder'
 echo '####################################################'
 sudo mkdir -p /mnt/media/comics
 
+echo '####################################################'
+echo 'Creating YouTube Folder'
+echo '####################################################'
+sudo mkdir -p /mnt/media/youtube
+
 # Starts ALL Docker Containers
 echo '####################################################'
 echo 'Starting Docker Containers'
