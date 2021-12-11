@@ -77,6 +77,8 @@ services:
   jackett:
     container_name: ${CONTAINER_NAME_JACKETT}
     environment:
+      - PUID=${USER_ID}
+      - PGID=${GROUP_ID}
       - TZ=${TIME_ZONE}
     image: linuxserver/jackett:latest
     networks:
@@ -85,7 +87,6 @@ services:
       - ${JACKETT_PORT}:9117
     restart: unless-stopped
     volumes:
-      - ${TORRENTS_FOLDER}:/downloads
       - /mnt/docker/jackett:/config
   # Portainer - Docker Manager    
   portainer:
@@ -243,6 +244,10 @@ services:
     image: vcxpz/readarr:latest
     container_name: ${CONTAINER_NAME_READARR}
     restart: unless-stopped
+    environment:
+        - PUID=${USER_ID}
+        - PGID=${GROUP_ID}
+        - TZ=${TIME_ZONE}
     networks: 
         - network
     ports:
