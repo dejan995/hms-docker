@@ -253,7 +253,7 @@ services:
         - ${DOWNLOADS_FOLDER}:/downloads
   # Ubooquity - Books & Comics Reader  
   ubooquity:
-    image: ghcr.io/linuxserver/ubooquity:latest	
+    image: ghcr.io/linuxserver/ubooquity:latest
     container_name: ${CONTAINER_NAME_UBOOQUITY)
     restart: unless-stopped
     networks: 
