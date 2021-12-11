@@ -254,7 +254,7 @@ services:
   # Ubooquity - Books & Comics Reader  
   ubooquity:
     image: ghcr.io/linuxserver/ubooquity:latest
-    container_name: ${CONTAINER_NAME_UBOOQUITY)
+    container_name: ${CONTAINER_NAME_UBOOQUITY}
     restart: unless-stopped
     networks: 
         - network
