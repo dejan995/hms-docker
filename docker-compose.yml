@@ -55,7 +55,7 @@ services:
       - /mnt/docker/deluge:/config
       - ${DOWNLOADS_FOLDER}:/downloads
   # Jellyfin - Media Server    
-  Jellyfin:
+  jellyfin:
     container_name: ${CONTAINER_NAME_JELLYFIN}
     environment:
       - PUID=${USER_ID}
@@ -73,6 +73,7 @@ services:
       - ${MUSIC_FOLDER}:/music
       - ${TV_FOLDER}:/tv
       - ${VIDEOS_FOLDER}:/videos
+      - ${YTDLM_FOLDER}:/youtube
   # Jackett - Torrent Indexer    
   jackett:
     container_name: ${CONTAINER_NAME_JACKETT}
