@@ -8,8 +8,9 @@ if [ "$CONT" = "y" ]; then
 echo '############################################################################'
 echo 'This is the actual provider of the 2FA authentication process.'
 echo 'In this use case this is set to azure but if you are using a different provider, please exit this script and edit the oauth2-proxy.cfg file manually.'
+echo 'Starting from OAuth2 v7.3.0 the azure provider is depricated, instead OpenID will be used.'
 echo '############################################################################'
-read -p "Enter Provider: " -e -i 'azure' PROVIDER
+read -p "Enter Provider: " -e -i 'oidc' PROVIDER
 
 echo '############################################################################'
 echo 'This is the client_id value you get after creating the application in Azure Active Directory.'
@@ -74,7 +75,7 @@ request_logging = true
 provider = "${PROVIDER}"
 client_id = "${CLIENT_ID}"
 client_secret = "${CLIENT_SECRET}"
-oidc_issuer_url = "https://sts.windows.net/${TENANT_ID}/"
+oidc_issuer_url = "https://login.microsoftonline.com/${TENANT_ID}/v2.0"
 email_domains = "*"
 
 ## Templates

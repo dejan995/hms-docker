@@ -74,21 +74,21 @@ services:
       - ${TV_FOLDER}:/tv
       - ${VIDEOS_FOLDER}:/videos
       - ${YTDLM_FOLDER}:/youtube
-  # Jackett - Torrent Indexer    
-  jackett:
-    container_name: ${CONTAINER_NAME_JACKETT}
+  # Prowlarr - Torrent Indexer    
+  prowlarr:
+    container_name: ${CONTAINER_NAME_PROWLARR}
     environment:
       - PUID=${USER_ID}
       - PGID=${GROUP_ID}
       - TZ=${TIME_ZONE}
-    image: linuxserver/jackett:latest
+    image: lscr.io/linuxserver/prowlarr:develop
     networks:
       - network
     ports:
-      - ${JACKETT_PORT}:9117
+      - ${PROWLARR_PORT}:9696
     restart: unless-stopped
     volumes:
-      - /mnt/docker/jackett:/config
+      - /mnt/docker/prowlarr:/config
   # Portainer - Docker Manager    
   portainer:
     container_name: ${CONTAINER_NAME_PORTAINER}
@@ -166,17 +166,6 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
-  # MusicBrainz Picard - Music Tagger
-  picard:
-    container_name: ${CONTAINER_NAME_PICARD}
-    image: mikenye/picard
-    networks:
-      - network
-    ports:
-      - ${PICARD_PORT}:5800/tcp
-    volumes:
-      - /mnt/docker/picard:/config:rw
-      - ${MUSIC_FOLDER}:/storage:rw
   # Heimdall - Access Dashboard    
   heimdall:
     container_name: ${CONTAINER_NAME_HEIMDALL}

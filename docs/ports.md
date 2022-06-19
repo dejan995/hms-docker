@@ -8,12 +8,11 @@
 | Bazarr - Subtitles Manager  | 6767  |
 | Deluge - BitTorrent Client  | 8112  |
 | Jellyfin - Media Player  | 8096  |
-| Jackett - Torrent Indexer  | 9117  |
+| Prowlarr - Torrent Indexer  | 9696  |
 | Portainer - Docker Manager  | 9000  |
 | Radarr - Movies Manager  | 7878  |
 | Sonarr - TV Shows Manager  | 8989  |
 | YTDLM - YouTube Downloader  | 17442  |
-| MusicBrainz Picard - Music Tagger  | 5800  |
 | Heimdall - Access Dashboard  | 9983  |
 | Filemin - File Manager  | 3333  |
 | Readarr - Books Manager  | 8787  |

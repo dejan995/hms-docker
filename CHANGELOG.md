@@ -1,5 +1,12 @@
 # Changelog
 ## Updates
+### 19.06.2022
+1. Updated ***generate_oauth2_config.sh*** to take in account the deprecation of the ***azure*** provider in the latest OAuth2 version, v7.3.0.
+The ***OpenID*** provider is used instead.
+2. Bumped the ***Docker Compose*** version downloaded by the ***install.sh*** script to v2.6.0.
+3. Replaced ***Jackett*** with ***Prowlarr***.
+4. Removed ***MusicBrainz Picard***. This is app is to big and breaks one of the goals I have for this project - Be able to run everything with 2-4GB of RAM. There will be a replacment down the road.
+
 ### 11.12.2021
 1. Replaced MeTube with YouTude Downloader - Material.
 2. Added ***Deemix*** for music downloading.

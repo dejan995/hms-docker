@@ -214,9 +214,9 @@ DELUGE_PORT=8112
 CONTAINER_NAME_JELLYFIN=jellyfin
 JELLYFIN_PORT=8096
 
-# Jackett - Torrent Indexer
-CONTAINER_NAME_JACKETT=jackett
-JACKETT_PORT=9117
+# Prowlarr - Torrent Indexer
+CONTAINER_NAME_PROWLARR=prowlarr
+PROWLARR_PORT=9696
 
 # Portainer - Docker Manager
 CONTAINER_NAME_PORTAINER=portainer
@@ -233,10 +233,6 @@ SONARR_PORT=8989
 # YouTube Downloader/Material - YouTube Downloader
 CONTAINER_NAME_YTDLM=youtubedl-material
 YTDLM_PORT=17442
-
-# MusicBrainz Picard - Music Tagger
-CONTAINER_NAME_PICARD=picard
-PICARD_PORT=5800
 
 # Heimdall - Access Dashboard
 CONTAINER_NAME_HEIMDALL=heimdall

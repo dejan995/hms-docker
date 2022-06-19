@@ -51,7 +51,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y &>>/dev/null
 echo '####################################################'
 echo 'Installing Docker-Compose'
 echo '####################################################'
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &>>/dev/null
+sudo curl -L "https://github.com/docker/compose/releases/download/2.6.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &>>/dev/null
 sudo chmod +x /usr/local/bin/docker-compose &>>/dev/null
 
 # Creates the Main docker folder for storing configurations

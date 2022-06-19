@@ -60,14 +60,14 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 3. Deluge - BitTorrent Client
 4. ~~Emby - Media Server~~
 5. Jellyfin - Media Server
-6. Jackett - Torrent Indexer
+6. ~~Jackett - Torrent Indexer~~
 7. Portainer - Docker Manager
 8. Radarr - Movies Manager
 9. Sonarr - TV Shows Manager
 10. ~~MeTube - YouTube Video Downloader~~
 11. YouTube Downloader - Material
 12. Watchtower - Docker Container Update Service
-13. MusicBrainz Picard - Music Tagger
+13. ~~MusicBrainz Picard - Music Tagger~~
 14. ~~Organizr - Access Dashboard~~
 15. Heimdall - Access Dashboard
 16. Nginx Proxy Manager
@@ -79,6 +79,7 @@ For more instructions go to the [Manual](docs/MANUAL.md).
 22. Syncthing - Sync Manager
 23. OAuth2-Proxy - Authentication Provider
 24. Redis - Database and Cache (used by OAuth2-Proxy)
+25. Prowlarr - Torrent Indexer
 
 You can see a list of all services and the ports they are using [here](docs/ports.md).
 
